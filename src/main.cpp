@@ -7,6 +7,7 @@
 #include "globals.h"
 
 int main() {
+
     std::vector<Body> bodies;
     readInitialConditions("data/initial_conditions.txt", bodies);
 

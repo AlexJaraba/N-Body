@@ -13,6 +13,9 @@ struct Body {
     void updateAcceleration(const std::vector<Body>& bodies);
     void updatePosition(double dt);
     void updateVelocity(double dt);
+
+
 };
+
 
 #endif // BODY_H

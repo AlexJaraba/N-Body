@@ -4,6 +4,7 @@
 #include <vector>
 #include "body.h"
 #include "integrator.h"
+#include "functions.h"
 
 class Solver {
 public:

@@ -15,4 +15,9 @@ public:
     void step(std::vector<Body>& bodies, double dt) override;
 };
 
+class Heuns : public Integrator {
+public:
+    void step(std::vector<Body>& bodies, double dt) override;
+};
+
 #endif // INTEGRATOR_H

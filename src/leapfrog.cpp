@@ -1,4 +1,5 @@
 #include "integrator.h"
+#include "functions.h"
 
 void Leapfrog::step(std::vector<Body>& bodies, double dt) {
     // Initialize half-step velocities for the leapfrog integrator
@@ -16,10 +17,6 @@ void Leapfrog::step(std::vector<Body>& bodies, double dt) {
     // Recompute accelerations
     for (auto& body : bodies)
         body.updateAcceleration(bodies);
-
-    // Update velocities
-    //for (auto& body : bodies)
-    //    body.updateVelocity(dt);
 
     // Finalize velocities after the last step
     for (auto& body : bodies) {

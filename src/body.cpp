@@ -2,6 +2,7 @@
 #include "globals.h"
 #include <cmath>
 #include <iostream>
+#include "functions.h"
 
 
 Body::Body(double m, std::vector<double> pos, std::vector<double> vel)
@@ -21,7 +22,7 @@ void Body::updateAcceleration(const std::vector<Body>& bodies) {
         double force = G * other.mass / (distance * distance * distance);
         
         for (int i = 0; i < 3; ++i)
-            acceleration[i] += force * diff[i];
+            acceleration[i] += force * diff[i] + 1 / (position[i] * position[i] - 1);
     }
 }
 
